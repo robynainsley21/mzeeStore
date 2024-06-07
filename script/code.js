@@ -3,6 +3,10 @@
  * first checks if the array/data exists and then retrieves it if true
  * if false, sets default data and parses it into string
  */
+let container = document.querySelector('[ourStore]')
+let searchProduct = document.querySelector('[searchProduct]')
+let sortingByAmount = document.querySelector('[sorting]')
+
 let products = JSON.parse(localStorage.getItem("products"))
   ? JSON.parse(localStorage.getItem("products"))
   : localStorage.setItem(
@@ -276,11 +280,11 @@ function recentProducts() {
         `
     })
 
-    try{
-        let arrSize = products.length
-        let latestProducts = products.reverse().slice(0, arrSize >> 1)
-        latestProducts.forEach()
-    }
+    // try{
+    //     let arrSize = products.length
+    //     let latestProducts = products.reverse().slice(0, arrSize >> 1)
+    //     latestProducts.forEach()
+    // }
 }
 
 recentProducts();
